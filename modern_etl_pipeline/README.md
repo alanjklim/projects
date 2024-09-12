@@ -8,7 +8,7 @@ This diagram represents a data pipeline where:
 # Data Pipeline Architecture
 ```mermaid
 graph TD;
-    Local_DB[Local Database] -- Data Export --> AWS_RDS;
+    Kaggle_Dataset[Kaggle Dataset] -- Upload to RDS --> AWS_RDS;
     AWS_RDS -- Replicates Data --> Fivetran;
     Fivetran -- Syncs Raw Data --> AWS_S3_Raw;
     AWS_S3_Raw(AWS S3: Raw Data) -- Reads & Processes --> Databricks;
@@ -19,7 +19,7 @@ graph TD;
     classDef fivetranColor fill:#F39C12,stroke:#333,stroke-width:2px;
     classDef generalColor fill:#2ECC71,stroke:#333,stroke-width:2px;
 
-    Local_DB(Local Database):::generalColor;
+    Kaggle_Dataset(Kaggle Dataset):::generalColor;
     AWS_RDS(AWS RDS: PostgreSQL/MySQL):::awsColor;
     Fivetran(Fivetran: Data Replication):::fivetranColor;
     AWS_S3_Raw(AWS S3: Raw Data):::awsColor;
