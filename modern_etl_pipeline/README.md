@@ -1,19 +1,26 @@
-# **Explanation**:
-This diagram represents a data pipeline where:
-1. Data is exported from a local database to **AWS RDS**.
-2. **Fivetran** replicates data from RDS to **AWS S3 (raw data)**.
-3. **Databricks** processes and transforms the raw data from S3 and writes the processed data back to **AWS S3 (processed data)**.
-4. The processed data is then consumed by **BI tools, dashboards,** or **machine learning models**.
+# Modern Data Pipeline
+This project demonstrates a data pipeline using **AWS RDS**, **Fivetran**, **Databricks**, and **Apache Iceberg**. The pipeline includes batch processing of a Kaggle dataset and real-time streaming with **AWS Kinesis**.
 
-# Data Pipeline Architecture
+## Architecture Overview
+1. **Kaggle Dataset**: Use public dataset in CSV format
+2. **AWS RDS**: Load the dataset into **PostgreSQL DB**
+3. **Fivetran**: Replicate data from AWS RDS to **AWS S3** (raw data) in real-time
+4. **Databricks**: Process the raw data using **Databricks**, perform transformations, and write the processed data back to S3 via **Apache Iceberg** (for schema evolution and partitioning)
+5. **Real-Time Streaming with Kinesis**: Stream real-time data into Databricks via **AWS Kinesis**, process it, and store the results in **AWS S3** for real-time consumption
+
+## Data Flow
 ```mermaid
 graph TD;
     Kaggle_Dataset[Kaggle Dataset] -- Upload to RDS --> AWS_RDS;
     AWS_RDS -- Replicates Data --> Fivetran;
     Fivetran -- Syncs Raw Data --> AWS_S3_Raw;
     AWS_S3_Raw(AWS S3: Raw Data) -- Reads & Processes --> Databricks;
-    Databricks -- Writes Processed Data --> AWS_S3_Processed;
-    AWS_S3_Processed(AWS S3: Processed Data) -- Consumed by --> Data_Consumers;
+    Databricks -- Writes Processed Data (via Iceberg) --> AWS_S3_Processed;
+    AWS_S3_Processed(AWS S3: Processed Data via Iceberg) -- Consumed by --> Data_Consumers;
+
+    Kinesis(Kinesis Data Streams) -- Streams Real-Time Data --> Databricks;
+    Databricks -- Processes Real-Time Data --> AWS_S3_RealTime;
+    AWS_S3_RealTime(AWS S3: Real-Time Processed Data) -- Consumed by --> Data_Consumers;
 
     classDef awsColor fill:#3498DB,stroke:#333,stroke-width:2px;
     classDef fivetranColor fill:#F39C12,stroke:#333,stroke-width:2px;
@@ -23,6 +30,8 @@ graph TD;
     AWS_RDS(AWS RDS: PostgreSQL):::awsColor;
     Fivetran(Fivetran: Data Replication):::fivetranColor;
     AWS_S3_Raw(AWS S3: Raw Data):::awsColor;
-    Databricks(Databricks: Data Processing & Transformation):::awsColor;
-    AWS_S3_Processed(AWS S3: Processed Data):::awsColor;
-    Data_Consumers(Quicksight, ML Models):::generalColor;
+    Databricks(Databricks: Data Processing & Transformation with Iceberg):::awsColor;
+    AWS_S3_Processed(AWS S3: Processed Data via Iceberg):::awsColor;
+    AWS_S3_RealTime(AWS S3: Real-Time Processed Data):::awsColor;
+    Kinesis(Kinesis Data Streams):::awsColor;
+    Data_Consumers(Business, BI Tools, ML Models):::generalColor;
