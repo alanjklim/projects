@@ -1,0 +1,34 @@
+i have a few questions:
+fivetran - can this tool do data transformations? what do you mean by fivetran manages the pipeline and schema changes automatically, please give example. so the purpose hear is that is replicates source data?
+
+databricks - what does it mean by processing raw data into raw data layer? im tring to visualise how databricks work. is it a container around aws or the other way around? can databricks store Transformed Data Layer like a datawarehouse? what is the purpose of using databricks here?
+
+am i correct is saying that the flow looks like this:
+fivetran (data replication from source) >
+aws s3 raw data storage >
+databricks - unsure what this does from s3
+dbt - staging the data? >
+redshift - clean data >
+data consumers - use data
+
+
+fivetran - if a schema change is detected, what behaviour is done to the history if a column is added for example? also explain other scenarios where schema changes occur and how fivetran deal with this? is it possible to connect from local db on postgres? i do not have a online source database.
+
+when data is replcated by fivetran, does it overwrite the s3 data? what do companies typically do here? do hey ingest and store data daily in partitions? plese also explain if the process is the same for databricks where processing it stored daily in partitions.
+
+please clarify this part year=2024/month=09/day=12/, is data replication occuring at intervals and appends using delta and batch?
+
+what is iceburg?
+
+still confused, is iceburg a better replacement for s3? using mermaid, draw me a system design where iceburg is used.
+what is the difference between data lake and data warehouse?
+what is flink?
+
+what is the dfference between a database like orace, sql server, postgres and data warehouse then? 
+what kind of processing does databricks do? give examples and use case
+
+
+rds
+postgres-rds
+postgres
+awsa3g15

@@ -20,9 +20,9 @@ graph TD;
     classDef generalColor fill:#2ECC71,stroke:#333,stroke-width:2px;
 
     Kaggle_Dataset(Kaggle Dataset):::generalColor;
-    AWS_RDS(AWS RDS: PostgreSQL/MySQL):::awsColor;
+    AWS_RDS(AWS RDS: PostgreSQL):::awsColor;
     Fivetran(Fivetran: Data Replication):::fivetranColor;
     AWS_S3_Raw(AWS S3: Raw Data):::awsColor;
     Databricks(Databricks: Data Processing & Transformation):::awsColor;
     AWS_S3_Processed(AWS S3: Processed Data):::awsColor;
-    Data_Consumers(BI Tools, Dashboards, ML Models):::generalColor;
+    Data_Consumers(Quicksight, ML Models):::generalColor;
