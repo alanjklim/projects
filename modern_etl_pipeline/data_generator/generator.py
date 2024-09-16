@@ -18,7 +18,7 @@ events_data = []
 account_types = ['Transaction Account', 'Savings Account', 'Credit Card', 'Home Loan', 'Term Deposit']
 transaction_types = ['Purchase', 'Withdrawal', 'Deposit', 'Transfer']
 merchants = [
-    'Woolworths', 'Coles', 'Kmart', 'JB Hi-Fi', 'BP Petrol', 'Bunnings Warehouse', 
+    'Woolworths', 'Coles', 'Kmart', 'JB Hi-Fi', 'BP Petrol', 'Bunnings Warehouse',
     'Amazon Australia', 'Uber Eats', 'Telstra', 'Optus', 'Australian Taxation Office'
 ]
 devices = ['iPhone', 'Android Phone', 'Desktop PC', 'Laptop', 'iPad']
@@ -35,11 +35,12 @@ for i in range(1, num_customers + 1):
         'phone_number': fake.phone_number(),
         'address': fake.address(),
         'date_of_birth': fake.date_of_birth(minimum_age=18, maximum_age=80),
-        'created_at': fake.date_this_decade(),
+        'created_at': fake.date_time_this_year(),  # Record creation time
+        'updated_at': fake.date_time_this_year(),  # Record update time
         'occupation': fake.job()
     }
     customers_data.append(customer)
-    
+
     # Generate Account Information (1-3 accounts per customer)
     num_accounts = random.randint(1, 3)
     for j in range(num_accounts):
@@ -47,39 +48,48 @@ for i in range(1, num_customers + 1):
         account_type = random.choice(account_types)
         account_balance = round(random.uniform(500, 100000), 2)
         account_opened_at = fake.date_between(start_date=customer['created_at'], end_date='today')
-        
+
         account = {
             'account_number': account_number,
             'customer_id': customer_id,
             'account_type': account_type,
             'balance': account_balance,
             'opened_at': account_opened_at,
-            'branch_name': random.choice(['Sydney', 'Melbourne', 'Perth', 'Brisbane', 'Adelaide', 'Canberra'])
+            'branch_name': random.choice(['Sydney', 'Melbourne', 'Perth', 'Brisbane', 'Adelaide', 'Canberra']),
+            'created_at': fake.date_time_this_year(),
+            'updated_at': fake.date_time_this_year()
         }
         accounts_data.append(account)
-        
-        # Generate Transactions (10-50 per account, with realistic transaction amounts)
-        num_transactions = random.randint(10, 50)
+
+        # Generate Transactions (1-10 per account, with realistic transaction amounts)
+        num_transactions = random.randint(1, 10)
         for k in range(num_transactions):
+            transaction_id = f"TRX-{account_number}-{k}"  # Surrogate key for transaction_id
             transaction = {
+                'transaction_id': transaction_id,  # New primary key column
                 'account_number': account_number,
                 'transaction_date': fake.date_time_between(start_date=account['opened_at'], end_date='now'),
                 'merchant': random.choice(merchants),
                 'amount': round(random.uniform(-2000, 5000), 2),  # Negative for withdrawals/purchases, positive for deposits
                 'transaction_type': random.choice(transaction_types),
-                'transaction_location': random.choice(['Online', 'In-store', 'ATM', 'POS'])
+                'transaction_location': random.choice(['Online', 'In-store', 'ATM', 'POS']),
+                'created_at': fake.date_time_this_year(),
+                'updated_at': fake.date_time_this_year()
             }
             transactions_data.append(transaction)
-    
+
     # Generate Event Logs (5-15 per customer, with realistic devices and IPs)
-    num_events = random.randint(5, 15)
+    num_events = random.randint(1, 5)
     for l in range(num_events):
         event = {
+            'event_id': f"EVT-{customer_id}-{l}",  # Surrogate key to serve as the primary key
             'customer_id': customer_id,
             'event_date': fake.date_time_this_year(),
             'event_type': random.choice(['Login', 'Logout', 'Password Change', 'Fund Transfer']),
             'device': random.choice(devices),
-            'ip_address': fake.ipv4_public()
+            'ip_address': fake.ipv4_public(),
+            'created_at': fake.date_time_this_year(),
+            'updated_at': fake.date_time_this_year()
         }
         events_data.append(event)
 
