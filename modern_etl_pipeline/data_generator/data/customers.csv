@@ -1,0 +1,201 @@
+customer_id,first_name,last_name,email,phone_number,address,date_of_birth,created_at,occupation
+1,Mariah,Crawford,danielle.king@example.com,49764271,"30 White Mall
+Joshualand, TAS, 2644",1973-03-21,2022-07-04,Fine artist
+2,Amy,Flores,benjamin.woods@example.com,(07)25913757,"Flat 30 5 Powers Vista
+Madisonborough, NT, 2653",1977-09-05,2024-03-23,Purchasing manager
+3,David,Miller,debbie.silva@example.com,+61-3-7394-8632,"Apt. 902 490 William Interchange
+Port Jacquelinefurt, WA, 2896",1944-06-26,2022-11-17,Chiropractor
+4,Joshua,Wade,james.murray@example.com,+61.2.5720.6788,"755 Sanders Rotary
+Julieshire, TAS, 2715",1999-08-24,2021-10-18,Counsellor
+5,Nicholas,Strickland,danny.mann@example.com,9694.0544,"39 James Green
+Port Nicholaston, SA, 2656",1969-07-30,2020-05-19,Chief Executive Officer
+6,Joan,Gillespie,david.west@example.com,(08).1173.9942,"Level 9 6 Anne Centre
+Pereztown, TAS, 2943",1973-08-26,2023-04-02,IT technical support officer
+7,Dalton,Allen,sarah.gutierrez@example.com,5045-4891,"Suite 320 17 Sarah Court
+East Shannon, QLD, 7936",1980-07-08,2022-05-09,Nutritional therapist
+8,Todd,Henson,april.johnson@example.com,02-3885-1761,"75 Ayers Centre
+Lake Adamtown, TAS, 2619",1982-06-13,2023-10-28,"Pharmacist, hospital"
+9,John,Carpenter,samantha.steele@example.com,(02) 8826 7896,"76 Jones Centre
+Bowenville, SA, 0216",1944-11-11,2023-01-28,Customer service manager
+10,Jennifer,Mclaughlin,joseph.clark@example.com,+61 3 1179 8772,"Apt. 313 747 Lee Deviation
+West Bradley, NSW, 2554",2003-08-22,2020-02-01,Quality manager
+11,Alfred,Good,amy.wright@example.com,(07).6271.3967,"17 Cabrera Thoroughfare
+Lake Jennifer, QLD, 5503",2006-02-12,2024-08-11,"Journalist, magazine"
+12,John,Lopez,julie.hernandez@example.com,(07)47987378,"Apt. 915 03 Wright Viaduct
+North Donnaberg, NT, 8021",1944-01-17,2024-06-19,Tourist information centre manager
+13,Michael,Hoover,chelsea.huffman@example.com,(07)07188756,"Unit 56 732 Shaw Expressway
+St. Charlesstad, QLD, 2544",1990-01-22,2023-09-18,"Psychologist, prison and probation services"
+14,Lisa,Taylor,amy.robles@example.com,+61 3 8231 6634,"710/549 Rodriguez Chase
+Willismouth, NT, 2960",1962-01-14,2020-03-09,Publishing copy
+15,Aaron,Short,haley.anderson@example.com,07-1531-1222,"5 Massey Terrace
+Morrisstad, VIC, 2914",1963-01-17,2022-11-30,Television camera operator
+16,Malik,Sanders,richard.jones@example.com,(08).1363.7097,"57/89 Hernandez Basin
+Jillton, SA, 3972",1958-09-18,2020-01-05,Chiropractor
+17,Rachael,Davis,timothy.david@example.com,02-3516-0985,"446 Philip Riverway
+East Joseph, QLD, 2933",2005-01-25,2020-02-04,Information officer
+18,Nathan,Martinez,colleen.perez@example.com,48941747,"Unit 13 858 Parks Road
+Marthaside, NSW, 2912",1961-08-05,2020-11-08,Armed forces logistics/support/administrative officer
+19,Kimberly,Flores,amy.white@example.com,08 0546 4766,"76 Danielle Follow
+Port Samuelstad, SA, 2967",2003-05-28,2021-10-11,IT sales professional
+20,Mary,Shaffer,andrew.randolph@example.com,+61-426-723-865,"324/410 Jerome Heights
+Jamesberg, NT, 2615",2003-03-24,2021-11-20,Energy engineer
+21,Heather,Green,james.vance@example.com,+61 464 802 036,"2 Judith Square
+St. Angela, ACT, 2984",1964-02-06,2020-10-14,Public relations officer
+22,Jasmine,Sharp,katelyn.willis@example.com,0480-735-561,"Unit 12 645 Paula Villas
+St. Tina, NT, 2905",1945-07-20,2021-06-28,"Scientist, water quality"
+23,Amanda,Morrison,colton.schneider@example.com,+61.431.744.152,"51 Hall Key
+Heatherview, WA, 7915",1976-04-25,2022-05-06,Materials engineer
+24,Elijah,Hill,benjamin.bryant@example.com,(08) 5829 1812,"5 Katherine Roadside
+Lake Kelly, QLD, 2675",1955-04-19,2022-09-07,"Research officer, government"
+25,Jennifer,Harvey,brent.morris@example.com,(03)43757335,"8/541 Ronald Tor
+Wendyborough, VIC, 2920",2000-04-27,2022-09-07,Theme park manager
+26,Jeremy,Hunter,amanda.armstrong@example.com,(08).9390.8175,"2 Carroll Interchange
+Lake Richardchester, WA, 9066",1965-06-08,2021-11-18,"Surveyor, rural practice"
+27,Anthony,Moore,todd.mccoy@example.com,0472-151-929,"09/3 Tate Upper
+Steveside, NT, 5557",2002-12-26,2022-08-01,"Engineer, water"
+28,Diana,Adams,ralph.johnson@example.com,(03) 3339 6899,"190/3 John Trail
+Webbburgh, WA, 2971",1971-09-13,2024-05-02,Naval architect
+29,Donald,Garrett,nicholas.ellis@example.com,0870856666,"53/2 Taylor Siding
+South Jennifershire, SA, 8863",1978-04-18,2024-06-08,"Engineer, chemical"
+30,Denise,Martinez,sydney.beard@example.com,0472 529 462,"Flat 04 43 Rachael Circus
+Jeffreyhaven, ACT, 2497",1986-12-02,2021-08-12,Travel agency manager
+31,Amy,Garcia,lisa.jones@example.com,+61-443-090-377,"50 Meyer Triangle
+Christopherview, ACT, 2356",1966-01-23,2020-12-22,"Surveyor, insurance"
+32,John,Mullins,jessica.thompson@example.com,+61-3-7965-4190,"4 Eric Hill
+West Williamchester, SA, 2630",1999-02-18,2024-07-18,Freight forwarder
+33,Richard,Williams,donald.martinez@example.com,07 9474 8159,"148 Rodriguez Dale
+North Charles, QLD, 3762",1947-03-23,2021-09-16,IT consultant
+34,Jerry,Brooks,richard.flores@example.com,03-9214-0635,"Suite 578 853 Steele Siding
+Lake Deborahhaven, QLD, 0268",1982-11-28,2021-12-15,Agricultural consultant
+35,Robert,Morales,nicholas.nichols@example.com,+61 479 512 843,"9 Davis Roadside
+Mitchellside, NSW, 9010",1971-01-03,2023-06-07,Sales promotion account executive
+36,Lauren,Oliver,sharon.smith@example.com,(02).5847.4171,"Suite 371 6 Samuel Estate
+Jodistad, NSW, 2203",1985-06-26,2020-12-20,"Designer, furniture"
+37,Jason,Mckenzie,jennifer.bowers@example.com,07-2782-7326,"Level 8 11 Kristina Park
+New Cherylport, WA, 2641",1985-01-28,2021-02-17,Radio broadcast assistant
+38,Laurie,Green,scott.stanley@example.com,03 5861 8871,"Level 5 09 Harding Brow
+Nicholasstad, ACT, 7588",1960-02-09,2020-04-17,Environmental health practitioner
+39,Taylor,Brewer,jessica.dominguez@example.com,+61-468-813-928,"877 Alexander Brae
+Markchester, NSW, 2627",1950-05-27,2021-03-18,Cartographer
+40,James,Ray,barbara.smith@example.com,+61-448-135-491,"5/007 Jennifer Corner
+West Brenda, ACT, 0276",1974-09-18,2024-02-25,Glass blower/designer
+41,Brian,Olson,nathan.garrett@example.com,07 6997 2964,"800 Jose Flat
+East Melissa, WA, 2621",1969-07-19,2021-12-15,Exercise physiologist
+42,April,Benson,charles.perry@example.com,7193-0547,"Flat 50 083 Hutchinson Intersection
+Juliabury, SA, 2690",1959-03-24,2023-11-22,Scientific laboratory technician
+43,Robert,Thompson,courtney.williams@example.com,+61.499.784.799,"28/361 Morris Retreat
+Andersonstad, TAS, 2469",2005-01-12,2021-05-25,Fish farm manager
+44,Gabriel,Johnson,dan.sheppard@example.com,(03)97643876,"9 Patrick Fairway
+Frankmouth, NSW, 2625",2001-03-08,2020-02-09,"Investment banker, operational"
+45,Brenda,Brown,bethany.holland@example.com,+61381137527,"615 Ryan Circle
+North Garytown, VIC, 2641",1991-01-27,2023-05-29,Administrator
+46,Marissa,Alvarez,samuel.sanchez@example.com,+61 448 897 825,"477 Golden Landing
+Lake Michael, VIC, 3384",1958-07-23,2021-05-06,Sales executive
+47,Colleen,Wells,kenneth.green@example.com,03 5837 4220,"Apt. 792 11 Rebecca Arcade
+South Kellymouth, NSW, 2920",1991-07-08,2020-03-15,Contractor
+48,Cynthia,Bailey,cathy.craig@example.com,+61.7.5692.9408,"81/9 Kimberly Round
+Perrytown, TAS, 0807",1998-12-21,2023-11-27,Theatre manager
+49,Jessica,Perkins,jessica.anderson@example.com,+61 427 187 772,"06 Wood Lookout
+Simmonshaven, TAS, 2950",1971-02-12,2022-08-22,Private music teacher
+50,Ronald,Lawrence,hailey.aguirre@example.com,0491-379-676,"Suite 979 19 Dominguez Trunkway
+Port Miguelhaven, SA, 0890",2004-01-05,2023-12-20,Operational investment banker
+51,Brittany,Phillips,melissa.patel@example.com,9591.8903,"Flat 66 34 Heather Plateau
+Andreabury, VIC, 2457",1957-06-29,2022-07-08,Financial trader
+52,Crystal,Casey,joshua.richardson@example.com,4383 1361,"5 David Plateau
+Alexanderborough, SA, 0223",1981-05-10,2022-12-31,Community development worker
+53,Zachary,Martin,raymond.davis@example.com,1332 4704,"Unit 53 4 Smith Port
+New Tiffanychester, VIC, 2601",1960-01-05,2024-03-31,Herbalist
+54,Gerald,Cobb,albert.roberson@example.com,(02)-7101-1769,"22/7 Perkins Park
+South Jimmyborough, TAS, 2631",1978-10-29,2020-06-29,"Programme researcher, broadcasting/film/video"
+55,John,Mcdonald,laura.day@example.com,+61 2 4038 8968,"Apt. 010 4 Christopher Cross
+East Tiffany, WA, 2260",1981-04-01,2024-05-13,Site engineer
+56,Dan,Tucker,gary.murphy@example.com,+61.8.2822.6476,"458 Wood Lane
+West Leonardfort, WA, 4775",1981-04-07,2020-05-25,"Loss adjuster, chartered"
+57,Devin,Hawkins,adam.roach@example.com,0485 598 713,"5 Hall Parklands
+North Margaretmouth, NT, 2960",1992-09-19,2021-06-30,Geophysical data processor
+58,Andrew,Hill,brandon.ware@example.com,02 9194 9591,"403 Williams Rotary
+St. Christopher, TAS, 2633",1989-08-24,2022-04-01,Financial adviser
+59,James,Davis,joseph.hernandez@example.com,08.5493.7972,"Suite 238 804 Ellen Bypass
+Ruizport, SA, 2423",1954-07-02,2024-03-06,Osteopath
+60,Allison,Johnson,tyler.valdez@example.com,5201.4955,"3/23 Kelly Intersection
+Melissaberg, NSW, 2802",1971-03-12,2020-02-04,"Engineer, land"
+61,Jose,Clark,craig.ryan@example.com,+61-8-9934-6872,"06 Aaron Highway
+West Tammy, NT, 2754",1976-09-16,2020-12-31,"Therapist, horticultural"
+62,David,Sandoval,john.wilson@example.com,+61-2-7852-1439,"Unit 01 658 Allen Gardens
+Ricemouth, VIC, 2964",1949-10-13,2020-03-18,Information officer
+63,Bernard,Watson,jodi.banks@example.com,+61-7-7786-3924,"95/852 Crosby Alleyway
+Lake Crystal, NSW, 3873",1960-02-29,2023-09-06,Building surveyor
+64,Virginia,French,aaron.smith@example.com,08.3935.3387,"23 Holloway Plateau
+Sandraton, VIC, 2610",1971-06-18,2022-01-21,Dispensing optician
+65,Dawn,Rhodes,joanne.gibson@example.com,+61-7-5379-9232,"43/30 Julie Meander
+Andreaside, NT, 2251",1956-12-02,2021-11-29,Corporate investment banker
+66,Dennis,Williams,edward.dodson@example.com,07.6794.3219,"Flat 84 380 Paul Anchorage
+North Annahaven, ACT, 2619",1997-10-21,2021-10-31,"Lecturer, higher education"
+67,William,Morgan,ronald.martin@example.com,07 5059 3698,"93 House Amble
+West Tara, WA, 2862",1963-10-18,2020-09-30,"Teacher, early years/pre"
+68,Eric,Osborn,jason.hall@example.com,07 0700 1991,"Unit 55 432 Stanton Gardens
+South Jonborough, QLD, 2927",1995-03-19,2020-09-24,Quality manager
+69,Theresa,Hughes,matthew.dodson@example.com,1312.9955,"194/8 Young Gully
+Staffordburgh, NT, 2645",1960-11-04,2020-01-22,Mental health nurse
+70,Rachel,Hamilton,lawrence.williams@example.com,0342415596,"306 Patricia Link
+South Derekshire, VIC, 2916",1969-07-27,2020-01-07,Control and instrumentation engineer
+71,Paul,Johnson,austin.owens@example.com,+61838559621,"5 Clark Towers
+Lake Jacob, NT, 0233",1989-12-27,2020-08-21,"Presenter, broadcasting"
+72,Jessica,Jones,emily.johnson@example.com,07 4712 5707,"Level 8 93 Moss Riverway
+Lindseyhaven, TAS, 2148",1947-05-15,2022-04-15,Recycling officer
+73,Lisa,Brown,patrick.martinez@example.com,1945.2798,"Level 4 266 Hernandez Garden
+Heatherland, NT, 2806",1949-04-03,2021-12-28,Water quality scientist
+74,Cynthia,Russell,jerry.dunn@example.com,24838904,"2 Hopkins Heights
+North Tyler, NT, 2423",1963-12-29,2022-05-25,"Engineer, mining"
+75,Teresa,Thompson,stephanie.morton@example.com,+61-7-5533-9168,"Unit 24 99 Rebekah Trunkway
+West Jonathonside, ACT, 2632",1980-06-30,2024-02-27,IT sales professional
+76,Dylan,Lewis,jessica.sanchez@example.com,0418.442.619,"41/6 Shaun Fire Track
+Haasport, QLD, 0920",1983-10-09,2020-08-25,"Restaurant manager, fast food"
+77,James,Lozano,john.tyler@example.com,18587228,"161/56 Paul Junction
+West Kimmouth, VIC, 4939",1964-11-22,2022-01-23,Pensions consultant
+78,Dawn,Mcclure,brian.johnson@example.com,(08)-0166-5231,"349 Andrew Strand
+Travisberg, NT, 2917",1966-11-01,2021-03-21,"Research officer, trade union"
+79,Suzanne,Jones,kelly.farmer@example.com,+61-2-9088-6068,"204/62 Patrick Subway
+Sampsonborough, ACT, 6649",1954-05-04,2023-09-04,Haematologist
+80,Melanie,Davis,clayton.petersen@example.com,07.8691.4879,"81 Lee Ronde
+Wagnerbury, SA, 5479",1960-07-04,2023-01-29,Operations geologist
+81,Alison,Patterson,troy.phelps@example.com,02 7012 4719,"7 Smith Circlet
+West Tracey, SA, 8622",2001-02-20,2022-02-24,Financial planner
+82,Jacob,Patel,thomas.brown@example.com,02.2402.2669,"719 Carpenter Formation
+Port Emilybury, ACT, 2066",1951-06-20,2021-11-26,"Nurse, children's"
+83,Brian,Wright,brady.smith@example.com,02.3571.4429,"712 Wallace Villas
+Brianmouth, TAS, 2999",1957-09-28,2020-04-10,Lexicographer
+84,Julie,Mcpherson,cynthia.lopez@example.com,+61 464 562 050,"31 Mary Basin
+Port David, TAS, 2962",1988-03-10,2024-04-25,Armed forces operational officer
+85,Dale,Brown,michelle.wilson@example.com,0429-327-854,"601 Mayer Causeway
+Camposland, SA, 5072",1986-12-20,2021-05-20,"Engineer, maintenance (IT)"
+86,Tiffany,Calderon,charles.campos@example.com,03 7242 5471,"Flat 21 403 Jerry Plaza
+Melissamouth, TAS, 2674",1995-06-14,2023-07-24,Psychiatrist
+87,Ruth,Horne,kyle.lara@example.com,+61.482.461.387,"Flat 31 2 Combs Driveway
+Bryantberg, NSW, 7033",2006-02-03,2022-05-19,Horticultural consultant
+88,Shawna,Snyder,ronald.nixon@example.com,02.0383.6010,"1/857 Sylvia Mall
+West Tamaraburgh, TAS, 2923",1996-03-20,2021-12-30,Community education officer
+89,Susan,Robertson,shane.carter@example.com,(07)57928850,"2/81 Gillespie Rest
+North Bobbyburgh, TAS, 0969",1991-01-13,2023-11-22,Tax adviser
+90,Mallory,Robinson,heather.henson@example.com,(08) 1401 0811,"4/77 Jacob Block
+North Charlestown, VIC, 2972",1995-09-29,2020-12-15,Audiological scientist
+91,Karen,Huff,ashley.scott@example.com,+61-447-387-200,"Apt. 612 7 Sheri Meander
+Lake Robertfort, QLD, 2929",1983-06-02,2023-10-15,Barista
+92,John,Duarte,nancy.brown@example.com,(08).1932.3679,"0/44 Williams Ronde
+Peggyport, ACT, 2946",1953-07-26,2020-10-31,Trading standards officer
+93,George,Wright,diana.davis@example.com,07 5992 3253,"645 Nancy Bend
+West Jackson, VIC, 2615",1950-04-30,2021-01-26,"Surveyor, quantity"
+94,Lisa,Perry,jennifer.harvey@example.com,(03) 9397 2895,"48 Richardson Little
+Reesemouth, QLD, 2919",1987-06-29,2023-12-15,Manufacturing engineer
+95,Austin,Franco,alec.clark@example.com,+61 471 959 473,"633/721 Williams Roads
+Brownborough, VIC, 2686",1958-04-11,2024-01-05,Commissioning editor
+96,Rachel,Gay,lauren.ramsey@example.com,07 8077 9976,"5 Ricky Part
+Marcobury, WA, 2204",1943-10-19,2023-02-07,"Surveyor, commercial/residential"
+97,Jennifer,Kelly,vanessa.long@example.com,0470 811 008,"638 Amber Outlook
+Adrianview, NSW, 2964",1963-06-30,2022-02-03,Risk manager
+98,Nathaniel,Barnett,alexis.nichols@example.com,0479.317.116,"60 Nelson Ridgeway
+Port Brett, NSW, 2619",1987-05-13,2023-03-31,Health promotion specialist
+99,Pamela,Roberson,mathew.spencer@example.com,02.6468.3326,"06/108 Rhodes Interchange
+St. Stephen, ACT, 2856",1983-05-29,2021-10-05,"Teacher, music"
+100,Gloria,Everett,danny.mejia@example.com,0444 881 898,"381 Beverly Trail
+Quinnhaven, QLD, 2678",1992-02-28,2021-03-10,Call centre manager
