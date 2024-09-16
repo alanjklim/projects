@@ -63,7 +63,7 @@ for i in range(1, num_customers + 1):
         for k in range(num_transactions):
             transaction = {
                 'account_number': account_number,
-                'transaction_date': fake.date_between(start_date=account['opened_at'], end_date='today'),
+                'transaction_date': fake.date_time_between(start_date=account['opened_at'], end_date='now'),
                 'merchant': random.choice(merchants),
                 'amount': round(random.uniform(-2000, 5000), 2),  # Negative for withdrawals/purchases, positive for deposits
                 'transaction_type': random.choice(transaction_types),
