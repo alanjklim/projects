@@ -1,7 +1,6 @@
 # rds connections
 endpoint: bank-postgres-db.c56o0miocxo2.ap-southeast-2.rds.amazonaws.com
 username: postgres
-password: 14170793
 port: 5432
 
 # fivetran policy json
