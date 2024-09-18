@@ -17,7 +17,8 @@ graph TD;
     Fivetran -- Syncs Raw Data --> AWS_S3_Raw;
     AWS_S3_Raw(AWS S3: Raw Data) -- Reads & Processes --> Databricks;
     Databricks -- Writes Processed Data (via Iceberg) --> AWS_S3_Processed;
-    AWS_S3_Processed(AWS S3: Processed Data via Iceberg) -- Transformed by --> dbt;
+    AWS_S3_Processed(AWS S3: Processed Data via Iceberg) -- Optionally Loaded into --> Redshift;
+    Redshift(Redshift: Data Warehouse) -- Transformed by --> dbt;
     dbt -- Applies Business Logic & Aggregates --> AWS_S3_Final;
     AWS_S3_Final(AWS S3: Final Data for Consumption) -- Consumed by --> Data_Consumers;
 
@@ -37,6 +38,7 @@ graph TD;
     AWS_S3_Raw(AWS S3: Raw Data):::awsColor;
     Databricks(Databricks: Data Processing & Transformation with Iceberg):::awsColor;
     AWS_S3_Processed(AWS S3: Processed Data via Iceberg):::awsColor;
+    Redshift(Redshift: Data Warehouse):::awsColor;
     dbt(dbt: Data Transformation):::dbtColor;
     AWS_S3_Final(AWS S3: Final Data for Consumption):::awsColor;
     AWS_S3_RealTime(AWS S3: Real-Time Processed Data):::awsColor;
