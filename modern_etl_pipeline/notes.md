@@ -1,74 +1,72 @@
-i have a few questions:
-fivetran - can this tool do data transformations? what do you mean by fivetran manages the pipeline and schema changes automatically, please give example. so the purpose hear is that is replicates source data?
+# AWS Glue vs Databricks vs dbt
+### 1. **Transformation Complexity and Modularity**
+   - **Scenario**: Create a multi-step transformation workflow with reusable components.
+   - **Test**: Implement the same transformation logic (e.g., data cleansing, joins, aggregations) using:
+     - **AWS Glue**: Use PySpark scripts for transformations.
+     - **Databricks**: Use Databricks Notebooks with SQL/PySpark.
+     - **dbt**: Use dbt models with SQL.
+   - **Goal**: Compare ease of development, reusability of code (modularity), and maintainability.
 
-databricks - what does it mean by processing raw data into raw data layer? im tring to visualise how databricks work. is it a container around aws or the other way around? can databricks store Transformed Data Layer like a datawarehouse? what is the purpose of using databricks here?
+### 2. **Version Control and Collaboration**
+   - **Scenario**: Simulate a collaborative workflow where multiple team members update and modify transformation logic.
+   - **Test**: Implement Git integration and version control in:
+     - **Glue Jobs**: Check for ease of collaboration and rollback functionality.
+     - **Databricks**: Utilize Databricks Repos for version control.
+     - **dbt**: Use dbt's inherent Git integration and collaboration features.
+   - **Goal**: Assess the ease of collaboration, merge conflicts, and ability to track changes.
 
-am i correct is saying that the flow looks like this:
-fivetran (data replication from source) >
-aws s3 raw data storage >
-databricks - unsure what this does from s3
-dbt - staging the data? >
-redshift - clean data >
-data consumers - use data
+### 3. **Data Lineage and Documentation**
+   - **Scenario**: Track data lineage and generate documentation for a set of data transformations.
+   - **Test**: Check how each tool provides visibility into how data is transformed and the metadata:
+     - **Glue**: Explore Glue's built-in data catalog and metadata features.
+     - **Databricks**: Test Databricks Unity Catalog or notebooks for lineage.
+     - **dbt**: Use dbt's data lineage and automatic documentation features (`dbt docs`).
+   - **Goal**: Measure how clear and automatic the lineage is for auditing and troubleshooting.
 
+### 4. **Data Quality and Testing**
+   - **Scenario**: Set up data quality tests and validate the transformed data at each step.
+   - **Test**: Create assertions to check for null values, unique constraints, and custom data quality tests.
+     - **Glue**: Implement data validation checks using PySpark.
+     - **Databricks**: Use Databricks SQL or external libraries for validation.
+     - **dbt**: Use dbt's built-in testing functionality to test data at each transformation step.
+   - **Goal**: Compare how easy it is to implement and maintain data quality checks.
 
-fivetran - if a schema change is detected, what behaviour is done to the history if a column is added for example? also explain other scenarios where schema changes occur and how fivetran deal with this? is it possible to connect from local db on postgres? i do not have a online source database.
+### 5. **Environment Management and Deployment**
+   - **Scenario**: Test how easily each tool manages environments (dev, staging, production) and deployment.
+   - **Test**:
+     - **Glue**: Test with Glue jobs, checking for deployment and environment variables.
+     - **Databricks**: Use Databricks workspaces and job clusters.
+     - **dbt**: Test dbt's environment management via `profiles.yml` and its deployment via CI/CD.
+   - **Goal**: Determine how each tool handles environment isolation and the ease of deployment.
 
-when data is replcated by fivetran, does it overwrite the s3 data? what do companies typically do here? do hey ingest and store data daily in partitions? plese also explain if the process is the same for databricks where processing it stored daily in partitions.
+### 6. **Cost and Resource Management**
+   - **Scenario**: Measure the cost of running a large-scale transformation and compare resource consumption.
+   - **Test**: Run a large ETL pipeline processing large datasets (e.g., 1TB or more) and track the cost for each tool:
+     - **Glue**: Measure AWS Glue job costs and cluster scaling.
+     - **Databricks**: Test job scaling and cost in Databricks.
+     - **dbt**: While dbt itself doesn't compute, measure the underlying compute engine's cost (whether using Redshift, Snowflake, or another compute).
+   - **Goal**: Compare resource efficiency, job run times, and cost for each tool.
 
-please clarify this part year=2024/month=09/day=12/, is data replication occuring at intervals and appends using delta and batch?
+### 7. **Schema Changes and Evolution**
+   - **Scenario**: Handle schema changes (e.g., new columns added to source data).
+   - **Test**: Introduce schema changes to the source data and evaluate how each tool handles them.
+     - **Glue**: Use Glue's dynamic frames or ETL scripts to handle evolving schemas.
+     - **Databricks**: Test Delta Lake’s ability to handle schema evolution.
+     - **dbt**: Use dbt's approach to schema changes with version control and refactoring.
+   - **Goal**: Compare each tool's flexibility and ease of handling schema changes.
 
-what is iceburg?
+### 8. **Real-Time Streaming vs Batch**
+   - **Scenario**: Test the ability to handle real-time streaming data.
+   - **Test**: Compare how Glue, Databricks, and dbt handle streaming data:
+     - **Glue**: Test Glue Streaming ETL.
+     - **Databricks**: Use Spark Structured Streaming.
+     - **dbt**: dbt focuses primarily on batch transformations—test if and how it can complement streaming use cases.
+   - **Goal**: Identify gaps in real-time data processing capability, especially for dbt.
 
-still confused, is iceburg a better replacement for s3? using mermaid, draw me a system design where iceburg is used.
-what is the difference between data lake and data warehouse?
-what is flink?
-
-what is the dfference between a database like orace, sql server, postgres and data warehouse then? 
-what kind of processing does databricks do? give examples and use case
-
-
-# rds connections
-endpoint: bank-postgres-db.c56o0miocxo2.ap-southeast-2.rds.amazonaws.com
-username: postgres
-password: 14170793
-port: 5432
-
-# fivetran policy json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-          "Sid": "SetupFormTest",
-          "Effect": "Allow",
-          "Action": [
-              "glue:DeleteDatabase"
-           ],
-           "Resource": [
-               "arn:aws:glue:ap-southeast-2:534455458037:database/fivetran*",
-               "arn:aws:glue:ap-southeast-2:534455458037:catalog",
-               "arn:aws:glue:ap-southeast-2:534455458037:table/fivetran*/*",
-               "arn:aws:glue:ap-southeast-2:534455458037:userDefinedFunction/fivetran*/*"
-           ]
-       },
-       {
-          "Sid": "AllConnectors",
-          "Effect": "Allow",
-          "Action": [
-              "glue:GetDatabase",
-              "glue:UpdateDatabase",
-              "glue:CreateTable",
-              "glue:GetTables",
-              "glue:CreateDatabase",
-              "glue:UpdateTable",
-              "glue:BatchDeleteTable",
-              "glue:DeleteTable",
-              "glue:GetTable"
-           ],
-           "Resource": [
-               "arn:aws:glue:ap-southeast-2:534455458037:*"
-           ]
-       }
-    ]
-}
-
+### 9. **Incremental Data Loads**
+   - **Scenario**: Load and transform only the incremental data from a large dataset.
+   - **Test**: Implement incremental data processing:
+     - **Glue**: Use Glue job bookmarks or custom logic to handle incremental loads.
+     - **Databricks**: Use Delta Lake’s incremental processing features.
+     - **dbt**: Use dbt’s built-in `incremental` materialization to handle partial loads.
+   - **Goal**: Compare efficiency, configuration complexity, and robustness of incremental data processing.
